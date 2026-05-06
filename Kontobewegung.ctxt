@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Kontobewegung
+comment0.text=\r\n\ Klasse,\ um\ die\ Transaktionen\ darzustellen\r\n
+comment1.params=pDate\ pBetrag
+comment1.target=Kontobewegung(java.util.Calendar,\ float)
+comment1.text=\r\n\ @param\ pDate\r\n\ Datum\ der\ Transaktion\r\n\ @param\ pBetrag\r\n\ Betrag\ der\ Transaktion\r\n
+comment2.params=
+comment2.target=java.util.Calendar\ getCal()
+comment2.text=\r\n\ @return\ Datum\ der\ Transaktion\r\n
+comment3.params=
+comment3.target=float\ getBetrag()
+comment3.text=\r\n\r\n\ @return\ Betrag\ der\ Transaktion\r\n
+numComments=4

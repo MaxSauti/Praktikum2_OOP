@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html","k":"18"},{"p":"<Unnamed>","l":"Inhaber"},{"p":"<Unnamed>","l":"Konto"},{"p":"<Unnamed>","l":"Kontobewegung"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Sparkonto"}];updateSearchResults();

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Inhaber
+comment0.text=\r\n\ Klasse\ um\ Inhaber\ zu\ definieren\r\n
+comment1.params=vorn\ nachn\ addr
+comment1.target=Inhaber(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Inhaber.\ Gibt\ Vorname,\ \r\n\ Nachname\ und\ Adresse\ an\r\n
+numComments=2

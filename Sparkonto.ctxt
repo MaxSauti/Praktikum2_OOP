@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Sparkonto
+comment0.text=\r\n\ Sparkonto\ erbt\ von\ Konto\ und\ f\u00FCgt\ Funktionalit\u00E4t\ eines\ Zinssatzes\ hinzu\r\n\r\n
+comment1.params=pInhab\ zins
+comment1.target=Sparkonto(Inhaber,\ float)
+comment1.text=\r\n\ Konstruktor\ mit\ \u00FCbergebenem\ Inhaber\ und\ Zinssatz\r\n\ @param\ pInhab\r\n\ @param\ zins\r\n
+comment2.params=cal
+comment2.target=void\ zinszahlung(java.util.Calendar)
+comment2.text=\r\n\ Zahlt\ den\ zum\ Zinssatz\ passenden\ Betrag\ auf\ das\ Konto\ ein\r\n
+numComments=3
