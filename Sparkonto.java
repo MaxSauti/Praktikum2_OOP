@@ -7,7 +7,7 @@ import java.util.Calendar;
 public class Sparkonto extends Konto
 {
     private final float zinssatz;
-
+    private Calendar naechsteZinszahlung = null;
     /**
      * Konstruktor mit übergebenem Inhaber und Zinssatz
      * @param pInhab Inhaber des Kontos
@@ -42,9 +42,24 @@ public class Sparkonto extends Konto
 
     /**
      * Zahlt den zum Zinssatz passenden Betrag auf das Konto ein
+     * und prüft ob bereits ein Jahr nach letzter Zahlung vergangen ist
      */
     public void zinszahlung(Calendar cal){
+        if (naechsteZinszahlung != null && cal.compareTo(naechsteZinszahlung) < 0){
+            System.out.println("Zinszahlung noch nicht möglich \n");
+            return;
+        }
+        setNaechsteZinszahlung(cal);
         float zinszahlung = (this.zinssatz/100) * getKontostand();
         einzahlen(zinszahlung, cal);
+    }
+
+    public Calendar getNaechsteZinszahlung() {
+        return naechsteZinszahlung;
+    }
+
+    public void setNaechsteZinszahlung(Calendar cal) {
+        naechsteZinszahlung = (Calendar) cal.clone();
+        naechsteZinszahlung.add(Calendar.YEAR, 1);
     }
 }

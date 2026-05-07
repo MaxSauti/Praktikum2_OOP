@@ -2,7 +2,7 @@ import java.util.Calendar;
 
 public class Main {
 
-    public static void main (String[] args){
+    public static void main (){
         Inhaber i1 = new Inhaber(" ", " ", "");
         Konto k1 = new Konto(i1, 20);
         Sparkonto s1 = new Sparkonto(i1, 5);
@@ -13,6 +13,7 @@ public class Main {
         k1.abheben(10, c1);
         s1.einzahlen(20, c1);
         s1.zinszahlung(c1);
+        s1.zinszahlung(c1);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(Calendar.MONTH, 7);
@@ -21,8 +22,16 @@ public class Main {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.MONTH, 5);
         s1.kontoauszug(cal);
-        cal.set(Calendar.MONTH, 1);
         k1.kontoauszug(cal);
+
+        cal.set(Calendar.YEAR, 2027);
+        cal.set(Calendar.MONTH, 11);
+        s1.zinszahlung(cal);
+        Calendar cal2 = (Calendar) cal.clone();
+        cal2.add(Calendar.YEAR, 1);
+        s1.zinszahlung(cal2);
+        cal2.add(Calendar.DAY_OF_MONTH, -1);
+        s1.zinszahlung(cal2);
         s1.kontoauszug(null);
     }
 

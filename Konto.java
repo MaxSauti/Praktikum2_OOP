@@ -123,11 +123,11 @@ public class Konto
         System.out.println("----Kontoauszug für Konto: " + this.kontonummer + "----");
         for (Kontobewegung beweg : List){
             if (date == null || date.compareTo(beweg.getCal()) <= 0) {
-                System.out.println(beweg.getCal().getTime() + " " + beweg.getBetrag() + "€");
+                System.out.println(beweg.getCal().getTime() + " " + formatiereBetrag(beweg.getBetrag()) + "€");
             }
         }
         System.out.println("------------------------");
-        System.out.println("Aktueller Kontostand: " + getKontostand() + "€");
+        System.out.println("Aktueller Kontostand: " + formatiereBetrag(getKontostand()) + "€");
         System.out.println("----Kontoauszug Ende----\n");
     }
 /*
@@ -141,6 +141,14 @@ public class Konto
 
  */
 
+    /**
+     * Beschränkt den übergebenen Betrag auf 2 Nachkommastellen
+     * @param betrag Betrag der formatiert werden soll
+     * @return formatieren Betrag
+     */
+    private String formatiereBetrag(float betrag){
+        return String.format("%.2f", betrag);
+    }
 
     
 }
